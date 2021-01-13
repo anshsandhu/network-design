@@ -1080,6 +1080,28 @@ def main(cur_file):
             dst.write("Revenue per year:" + str(revenue) + "\n")
      
 
+                        #dst.write("NumStructures:" + str(len(nodes)) + "\n")
+            print("NumConnectedStructures:" + str(connected_nodes) + "\n")
+            #dst.write("LVLength:" + str(my_lv) + "\n")
+            print("LVPerCustomer:" + str(float(my_lv) / connected_nodes) + "\n")
+            #dst.write("MVLength:" + str(MVLength) + "\n")
+            print("MVPerCustomer:" + str(MVLength / connected_nodes) + "\n")
+            #dst.write("Num Transformers:" + str(numTransformer) + "\n")
+            print("Customers Per Tx:" + str(connected_nodes / float(numTransformer)) + "\n")
+            #dst.write("Total LV Cost:" + str(my_lv * float(LV)) + "\n")
+            #dst.write("Total MV Cost:" + str(MVCost) + "\n")
+            transformerCost = numTransformer * TCost
+            #dst.write("Transformer Cost:" + str(transformerCost) + "\n")
+            total_cost = MVCost + my_lv * float(LV) + transformerCost
+            #dst.write("Total Grid Cost:" + str(total_cost) + "\n")
+            print("GridCostPerCustomer:" + str(total_cost/ connected_nodes) + "\n")
+            # dst.write("Offgrid Cost:" + str(offgrid_cost*(len(nodes)-connected_nodes)) + "\n")
+            runningT = time.time() - startTime
+            #dst.write("Total Running Time:" + str(runningT) + "\n")
+            runningT1 = time.time() - startTime
+            #dst.write("Final Running Time:" + str(runningT1) + "\n")
+            print("Total demand:" + str(demand) + "\n")
+            print("Revenue per year:" + str(revenue) + "\n")
       
         # with open(outputDir + 'modelOutput.txt', 'w') as dst:
         #     dst.write("NumStructures:" + str(len(nodes)) + "\n")
