@@ -1078,8 +1078,7 @@ def main(cur_file):
             #dst.write("Final Running Time:" + str(runningT1) + "\n")
             dst.write("Total demand:" + str(demand) + "\n")
             dst.write("Revenue per year:" + str(revenue) + "\n")
-            
-    print(outputDir)        
+     
 
       
         # with open(outputDir + 'modelOutput.txt', 'w') as dst:
