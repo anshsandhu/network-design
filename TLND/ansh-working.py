@@ -92,6 +92,9 @@ def generateDictsFromShp(shapeFile, outputPath):
         x = geomRef.GetX()
         y = geomRef.GetY()
 
+        # Trying putting nearest neigbors to every customer
+
+
         if FID in high:
             nodeDemand = 100  # at xx kWh/ month
         else:
@@ -260,7 +263,7 @@ def addToHeap(heap, newSegs):
 
 def buildAssocDict(segments):
     'Builds dictionary with nodeID key where values are segs from/to that node'
-    # import ipdb; ipdb.set_trace()
+    # ipdb.set_trace()
     segList = {}
     for seg in segments:
         node1, node2 = seg.getNodes()
@@ -317,53 +320,6 @@ def get_distance(centroidX, centroidY, nodelist):
         dist += tmp_dist
     return dist
 
-def generateSegmentsDemand(centers, searchRadius, all_ready_checked_list, roi_years, cost_per_kwh, tcost, LV,
-                           fraction_recovered):
-    segments = []
-    nodeCopy = centers.copy()
-    # multiplier = 1
-    segID = 0
-
-    for startNode in centers.values():
-        del nodeCopy[startNode.getID()]
-        for endNode in nodeCopy.values():
-            # if (startNode.getID() == 605) and (endNode.getID() == 606):
-            # import ipdb; ipdb.set_trace()
-            #            if (startNode.getID() !=node1) & (endNode.getID()!=node2):
-
-            if [startNode.getID(), endNode.getID()] not in all_ready_checked_list:
-                dist = ((startNode.getX() - endNode.getX()) ** 2 +
-                        (startNode.getY() - endNode.getY()) ** 2) ** (.5)
-                total_demand = startNode.getDemand() + endNode.getDemand()  # calculates the demand from both nodes
-                revenue = total_demand * roi_years * 12 * cost_per_kwh
-                # tx_cost = tcost * ((total_demand * 1000 * 0.6) / (4.0 * 30.0)) * fraction_recovered
-                delta = revenue - tcost
-                if delta > 0:
-                    searchRadius = delta / float(LV * fraction_recovered)
-                    if dist < searchRadius:  # selects feasible segments
-                        segments.append(network.Seg(segID, startNode, endNode, dist, total_demand))
-                        segID += 1
-            else:
-                pass
-    #                print [startNode.getID(),endNode.getID()]
-    # check segments length
-    #    while (len(segments) == 0) & (multiplier <=5) :
-    #        segments = []
-    #        nodeCopy = centers.copy()
-    #        segID = 0
-    #        for startNode in centers.values():
-    #            del nodeCopy[startNode.getID()]
-    #            for endNode in nodeCopy.values():
-    #                dist = ((startNode.getX() - endNode.getX()) ** 2 +
-    #                        (startNode.getY() - endNode.getY()) ** 2) ** (.5)
-    #                total_demand =  startNode.getDemand() + endNode.getDemand() # calculates the demand from both nodes
-    #                if dist < searchRadius*multiplier: #selects feasible segments
-    #                    segments.append(network.Seg(segID, startNode, endNode,dist,total_demand))
-    #                    segID += 1
-    #        multiplier+=1
-
-    return segments  
-
 
 def generateWeightedSegments(centers, searchRadius, roi_years, cost_per_kwh, LV, demand_weight= 0, LVCostDict = None):
     # this function determines the easiest to connect segments based on a ranking mechanism
@@ -385,7 +341,28 @@ def generateWeightedSegments(centers, searchRadius, roi_years, cost_per_kwh, LV,
             revenue = total_demand * roi_years * 12 * cost_per_kwh
             delta = revenue - total_line_cost
 
-            if dist < searchRadius:
+            #import ipdb; ipdb.set_trace()
+
+            # Location of the temporary transformer:
+            # Initializing with the nodes as centers
+            tempCenter1 = startNode; tempCenter2 = endNode
+            #Locating the centroid of the points
+            tempCenterX = (tempCenter1.getWeight() * tempCenter1.getX()
+                   + tempCenter2.getWeight() * tempCenter2.getX()) / (tempCenter2.getWeight() + tempCenter1.getWeight())
+            tempCenterY = (tempCenter1.getWeight() * tempCenter1.getY()
+                   + tempCenter2.getWeight() * tempCenter2.getY()) / (tempCenter2.getWeight() + tempCenter1.getWeight())
+
+            # The distance of nodes from the centroid:
+            distnode1fromT = ((startNode.getX() - tempCenterX) ** 2 +
+                        (startNode.getY() - tempCenterY) ** 2) ** (.5)
+
+            distnode2fromT = ((endNode.getX() - tempCenterX) ** 2 +
+                        (endNode.getY() - tempCenterY) ** 2) ** (.5)
+
+            # SearchRadius = distFromT in this case!
+
+            if (distnode1fromT < searchRadius) & (distnode2fromT < searchRadius):
+            #if dist < searchRadius: # Just put distFromT?
                 segments.append(network.Seg(segID, startNode, endNode, dist, delta))
                 segID += 1
                 if max_dist < dist:
@@ -394,7 +371,7 @@ def generateWeightedSegments(centers, searchRadius, roi_years, cost_per_kwh, LV,
                     max_delta = delta
             # else:
             #     pass
-    # import ipdb;ipdb.set_trace()
+    #import ipdb;ipdb.set_trace()
     segments_by_rank = []
     # note you can do standardization instead of normalization
     for seg in segments:
@@ -404,17 +381,22 @@ def generateWeightedSegments(centers, searchRadius, roi_years, cost_per_kwh, LV,
 
     return segments_by_rank
 
+# Function to find the nth best option (1: maximum, 2: next to maximum, ...)
+#def BestOption()  
+
 # def run(centers, nodesByClusterID, clusterByNode, LVCostDict, sr, MV, LV, TCost, distFromT, maxLVLenghtInCluster,
 #         outputDir, logfilename,max_connection):
 def run(centers, nodesByClusterID, clusterByNode, LVCostDict, sr, MV, LV, TCost, distFromT, investment,
             cost_per_kwh,roi_years, maxLVLenghtInCluster,outputDir, logfilename,max_connection,demand_weight):
     print("First Stage starts without MST")
-    import ipdb; ipdb.set_trace()
+    #import ipdb; ipdb.set_trace()
     sumLVCostAtEachStep = {}
     minCenters = copy.deepcopy(centers)
     # segments = generateSegments(minCenters, sr)
     segments = generateWeightedSegments(minCenters, sr,roi_years,cost_per_kwh,LV,demand_weight,LVCostDict)
-
+    checkedSegmentsID = []
+    SegmentsToCheck = copy.deepcopy(segments)
+    
     # To write total cost to a text file
     statFile = outputDir + os.sep + "TotalCost_FirstStage.txt"
     outFile = open(statFile, "w")
@@ -427,6 +409,7 @@ def run(centers, nodesByClusterID, clusterByNode, LVCostDict, sr, MV, LV, TCost,
     minClusterByNode = copy.deepcopy(clusterByNode)
     # minSeg = min(segments, key=lambda obj: obj.getWeight())
     minSeg = max(segments, key=lambda obj: obj.getDemand())
+
 
     if minSeg.getWeight() <= distFromT * 2:
         maxDist = 0
@@ -444,11 +427,26 @@ def run(centers, nodesByClusterID, clusterByNode, LVCostDict, sr, MV, LV, TCost,
     loggers(logfilename, initial)
     initial = False
     connected = 0
-    # import ipdb;ipdb.set_trace()
-    while (maxDist <= distFromT) & (connected <= max_connection):
+    
+    newTotalCost = 0
+
+    SegmentsToCheckID = []
+    for seg in segments:
+        SegmentsToCheckID.append(seg.getID())
+
+    all_ready_checked = []    
+
+    #while (connected <= max_connection):
+    while (maxDist <= distFromT) & (connected <= max_connection):    
         i -= 1
         cur_token = 'stage1 ' + str(i)
         loggers(logfilename, initial, cur_token)
+        
+        tmp_nodesByClusterID = copy.deepcopy(nodesByClusterID)
+        tmp_centers = copy.deepcopy(centers)
+        tmp_clusterByNode = copy.deepcopy(clusterByNode)
+        tmp_LVCostDict = copy.deepcopy(LVCostDict)
+
 
         center1, center2 = minSeg.getNodes()
         weight = center2.getWeight() + center1.getWeight()
@@ -456,19 +454,30 @@ def run(centers, nodesByClusterID, clusterByNode, LVCostDict, sr, MV, LV, TCost,
         mergingClusterID = max(clusterByNode[center1], clusterByNode[center2])
         nodesByClusterID[baseClusterID].extend(nodesByClusterID.pop(mergingClusterID))
 
+
         centers[baseClusterID].setXY(tempCenterX, tempCenterY)
         centers[baseClusterID].setWeight(weight)
 
         del centers[mergingClusterID]
+        checkedSegmentsID.append(minSeg.getID())
+
+        # What is the purpose of this?
 
         for node in nodesByClusterID[baseClusterID]:
             clusterByNode[node] = baseClusterID
 
         # segments = generateSegments(centers, sr)
 
+        # Deleting the checked Segments:
+        for i, o in enumerate(SegmentsToCheck):
+            if o.getID() == minSeg.getID():
+                del SegmentsToCheck[i]
+                break
+
+
         TotalTransformerCost = len(centers) * TCost
 
-        del LVCostDict[mergingClusterID]
+        
         gc.collect()
         segmentsCMST, LVCostDict[baseClusterID] = CMST_dfs_OLD.CMST(nodesByClusterID[baseClusterID],
                                                                     maxLVLenghtInCluster,
@@ -476,9 +485,14 @@ def run(centers, nodesByClusterID, clusterByNode, LVCostDict, sr, MV, LV, TCost,
 
         # sums the cost
         sumLVCostAtEachStep[len(centers)] = sum(LVCostDict.values()) * LV
+        oldcost = newTotalCost
         newTotalCost = TotalTransformerCost + (sum(LVCostDict.values())) * LV
 
+
         outFile.write("%i %f\n" % (i, sumLVCostAtEachStep[len(centers)]))
+
+        all_ready_checked.append([baseClusterID, mergingClusterID])
+
         if (newTotalCost <= minTotalCost):
             minNodesByClusterID = copy.deepcopy(nodesByClusterID)
             # minTree=copy.deepcopy(newTree)
@@ -486,11 +500,28 @@ def run(centers, nodesByClusterID, clusterByNode, LVCostDict, sr, MV, LV, TCost,
             minLVCostDict = LVCostDict.copy()
             minTotalCost = newTotalCost
             minClusterByNode = copy.deepcopy(clusterByNode)
-
             connected, trueNodesByClusterID, trueMinCenters = check_number_connected([minNodesByClusterID,minCenters])
 
+            # Adding this inside the statement:
+
+            del LVCostDict[mergingClusterID]
+
+            print("New total cost is: {}, difference is {}, The number connected is {}".format(newTotalCost, - newTotalCost + oldcost,
+                        connected))
+
+            #if connected >= 284:
+            #    import ipdb; ipdb.set_trace()
+
+        else:
+            minNodesByClusterID= copy.deepcopy(tmp_nodesByClusterID)
+            minCenters = copy.deepcopy(tmp_centers)
+            minClusterByNode = copy.deepcopy(tmp_clusterByNode)
+            LVCostDict = copy.deepcopy(tmp_LVCostDict)
+
+
         # Calculate maxDist below for next graph and continue if it is less than 500
-        segments = generateWeightedSegments(minCenters, sr, roi_years, cost_per_kwh, LV, demand_weight,LVCostDict)
+        #segments = generateWeightedSegments(minCenters, sr, roi_years, cost_per_kwh, LV, demand_weight,LVCostDict)
+        segments = SegmentsToCheck
         try:  # to check if there is a segment on the graph or there is only one cluster  # bir tane break eden varsa bile devamini check ediyor!!!!!
             # seems this looks for the shortest segment with the lv less that distFromT
             minSeg = max(segments, key=lambda obj: obj.getDemand()) # finds closest 2 points
@@ -507,7 +538,10 @@ def run(centers, nodesByClusterID, clusterByNode, LVCostDict, sr, MV, LV, TCost,
                             minSeg = seg  ## identifies a new minSeg to go to if there is still room to add to the LV
                             break # finds the next minimum segment to go to
         except:
-            break
+            break           
+
+
+
 
     outFile.close()
     # import ipdb;ipdb.set_trace()
@@ -815,16 +849,17 @@ def convert_to_utm_shp(latlon_shp,output_file ,epsg = 'epsg:32637'):
 
 
 def main(cur_file):
-    searchRadius = 100000  # meters
+    #searchRadius = 100000  # meters
     # Cost parameters:
     MV = 25  # Cost of MV per meter
     LV = 10  # Cost of LV per meter
     TCost = 2000  # Transformer Cost
     distFromT = 500  # Dmax, direct distance from transformers
+    searchRadius = distFromT  # Reducing the distance to search locally   
     maxLVLenghtInCluster = 500  # Lmax
     # read shape file
     outputDir = cur_file[:-4]
-    access_rate = 0.1  # penetration rate
+    access_rate = 0.5  # penetration rate
     investment = 600000
     roi_years = 5
     cost_per_kwh = 0.05
@@ -852,6 +887,9 @@ def main(cur_file):
                                                                     distFromT, investment, cost_per_kwh, roi_years,
                                                                     maxLVLenghtInCluster, outputDir, logfilename,connected,demand_weight)
 
+
+        #import ipdb; ipdb.set_trace()
+
         # import ipdb;ipdb.set_trace()
         fileRW.genShapefile(tree, outputDir + ".prj", outputDir + os.sep + "MV.shp")
 
@@ -871,7 +909,32 @@ def main(cur_file):
             tree._network[netID] = []
         my_lv = 0
         connected_nodes = [len(nodesByClusterID[k]) for k in centers.keys()]
+
+        # finding the revenue,
+
+        demand = 0
+
+        for k in centers.keys():
+
+            #import ipdb; ipdb.set_trace()
+
+            # selecting the nodes for that particular transformer
+            selectedNodes = nodesByClusterID[k]
+
+            # getting demands of each of them
+            for i in selectedNodes:
+                demand =  demand + i.getDemand()
+
+        revenue = demand*cost_per_kwh*12
+
+
+
+        #import ipdb; ipdb.set_trace()
+
         connected_nodes = sum(connected_nodes)
+
+  
+
         for ID in centers.keys():
             nodesByNodeID = {}
             segments, lvCost = CMST_dfs_OLD.CMST(nodesByClusterID[ID], maxLVLenghtInCluster, centers[ID])
@@ -893,27 +956,31 @@ def main(cur_file):
 
         fileRW.genShapefile(tree, outputDir + ".prj", outputDir + os.sep + "FinalGrid.shp")
 
+
         with open(outputDir + 'modelOutput.txt', 'w') as dst:
-            dst.write("NumStructures:" + str(len(nodes)) + "\n")
+            #dst.write("NumStructures:" + str(len(nodes)) + "\n")
             dst.write("NumConnectedStructures:" + str(connected_nodes) + "\n")
-            dst.write("LVLength:" + str(my_lv) + "\n")
+            #dst.write("LVLength:" + str(my_lv) + "\n")
             dst.write("LVPerCustomer:" + str(float(my_lv) / connected_nodes) + "\n")
-            dst.write("MVLength:" + str(MVLength) + "\n")
+            #dst.write("MVLength:" + str(MVLength) + "\n")
             dst.write("MVPerCustomer:" + str(MVLength / connected_nodes) + "\n")
-            dst.write("Num Transformers:" + str(numTransformer) + "\n")
+            #dst.write("Num Transformers:" + str(numTransformer) + "\n")
             dst.write("Customers Per Tx:" + str(connected_nodes / float(numTransformer)) + "\n")
-            dst.write("Total LV Cost:" + str(my_lv * float(LV)) + "\n")
-            dst.write("Total MV Cost:" + str(MVCost) + "\n")
+            #dst.write("Total LV Cost:" + str(my_lv * float(LV)) + "\n")
+            #dst.write("Total MV Cost:" + str(MVCost) + "\n")
             transformerCost = numTransformer * TCost
-            dst.write("Transformer Cost:" + str(transformerCost) + "\n")
+            #dst.write("Transformer Cost:" + str(transformerCost) + "\n")
             total_cost = MVCost + my_lv * float(LV) + transformerCost
-            dst.write("Total Grid Cost:" + str(total_cost) + "\n")
+            #dst.write("Total Grid Cost:" + str(total_cost) + "\n")
             dst.write("GridCostPerCustomer:" + str(total_cost/ connected_nodes) + "\n")
             # dst.write("Offgrid Cost:" + str(offgrid_cost*(len(nodes)-connected_nodes)) + "\n")
             runningT = time.time() - startTime
-            dst.write("Total Running Time:" + str(runningT) + "\n")
+            #dst.write("Total Running Time:" + str(runningT) + "\n")
             runningT1 = time.time() - startTime
-            dst.write("Final Running Time:" + str(runningT1))
+            #dst.write("Final Running Time:" + str(runningT1) + "\n")
+            dst.write("Total demand:" + str(demand) + "\n")
+            dst.write("Revenue per year:" + str(revenue) + "\n")
+            
 
         # with open(outputDir + 'modelOutput.txt', 'w') as dst:
         #     dst.write("NumStructures:" + str(len(nodes)) + "\n")
