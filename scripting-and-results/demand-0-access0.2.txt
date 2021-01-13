@@ -3,81 +3,19 @@ HERE
 Generating Dictionaries
 Run function starts...
 First Stage starts without MST
-New total cost is: 1438040.3146874579, difference is -1438040.3146874579, The number connected is 2
-New total cost is: 1436085.7964987867, difference is 1954.518188671209, The number connected is 4
-New total cost is: 1434133.46294253, difference is 1952.3335562567227, The number connected is 6
-New total cost is: 1432183.7002020895, difference is 1949.7627404404338, The number connected is 8
-New total cost is: 1430236.3362095293, difference is 1947.3639925601892, The number connected is 10
-New total cost is: 1428289.099994734, difference is 1947.2362147953827, The number connected is 12
-New total cost is: 1426345.2177821163, difference is 1943.8822126176674, The number connected is 14
-New total cost is: 1424408.6017036245, difference is 1936.6160784917884, The number connected is 16
-New total cost is: 1422473.1427195785, difference is 1935.4589840460103, The number connected is 18
-New total cost is: 1420538.2748450332, difference is 1934.867874545278, The number connected is 20
-New total cost is: 1418608.5235023773, difference is 1929.751342655858, The number connected is 22
-New total cost is: 1416679.5248465475, difference is 1928.9986558298115, The number connected is 24
-New total cost is: 1414754.9090373856, difference is 1924.6158091619145, The number connected is 26
-New total cost is: 1412831.1766785725, difference is 1923.732358813053, The number connected is 28
-New total cost is: 1410911.3570522275, difference is 1919.8196263450664, The number connected is 30
-New total cost is: 1408993.1056670607, difference is 1918.2513851667754, The number connected is 32
-New total cost is: 1407075.6051303642, difference is 1917.5005366965197, The number connected is 34
-New total cost is: 1405161.6047466132, difference is 1914.0003837510012, The number connected is 36
-New total cost is: 1403248.9657953703, difference is 1912.6389512429014, The number connected is 38
-New total cost is: 1401336.9851201444, difference is 1911.9806752258446, The number connected is 40
-New total cost is: 1399460.714088284, difference is 1876.271031860495, The number connected is 41
-New total cost is: 1397505.558506537, difference is 1955.1555817469489, The number connected is 43
-New total cost is: 1395600.2226535536, difference is 1905.3358529834077, The number connected is 45
-New total cost is: 1393695.3122150276, difference is 1904.9104385259561, The number connected is 47
-New total cost is: 1391790.6962308842, difference is 1904.6159841434564, The number connected is 49
-New total cost is: 1389888.022772302, difference is 1902.673458582256, The number connected is 51
-New total cost is: 1387987.9581250057, difference is 1900.0646472962108, The number connected is 53
-New total cost is: 1386088.1053575254, difference is 1899.8527674803045, The number connected is 55
-New total cost is: 1384189.8545297785, difference is 1898.2508277469315, The number connected is 57
-New total cost is: 1382292.0847936433, difference is 1897.7697361351456, The number connected is 59
-New total cost is: 1380394.3152643298, difference is 1897.7695293135475, The number connected is 61
-New total cost is: 1378496.9851008295, difference is 1897.3301635002717, The number connected is 63
-New total cost is: 1376599.8458009902, difference is 1897.1392998392694, The number connected is 65
-New total cost is: 1374703.841351299, difference is 1896.0044496911578, The number connected is 67
-New total cost is: 1372808.177150591, difference is 1895.6642007080372, The number connected is 69
-New total cost is: 1370912.9601338534, difference is 1895.2170167376753, The number connected is 71
-New total cost is: 1369022.731762613, difference is 1890.2283712404314, The number connected is 73
-New total cost is: 1367132.7001104422, difference is 1890.031652170699, The number connected is 75
-New total cost is: 1365242.7225606272, difference is 1889.9775498150848, The number connected is 77
-New total cost is: 1363341.6665653137, difference is 1901.0559953134507, The number connected is 78
-New total cost is: 1361457.3438878949, difference is 1884.3226774188224, The number connected is 80
-New total cost is: 1359574.2294959116, difference is 1883.1143919832539, The number connected is 82
-New total cost is: 1357691.2807093621, difference is 1882.948786549503, The number connected is 84
-New total cost is: 1355809.6150371854, difference is 1881.6656721767504, The number connected is 86
-New total cost is: 1353929.6997571797, difference is 1879.9152800056618, The number connected is 88
-New total cost is: 1352050.4656316151, difference is 1879.2341255645733, The number connected is 90
-New total cost is: 1350172.05842684, difference is 1878.4072047751397, The number connected is 92
-New total cost is: 1348294.6367458885, difference is 1877.421680951491, The number connected is 94
-New total cost is: 1346417.218170458, difference is 1877.4185754305217, The number connected is 96
-New total cost is: 1344540.5377425207, difference is 1876.6804279373027, The number connected is 98
-New total cost is: 1342670.657941411, difference is 1869.879801109666, The number connected is 100
-New total cost is: 1340800.825121212, difference is 1869.8328201989643, The number connected is 102
-New total cost is: 1338931.0905871727, difference is 1869.734534039395, The number connected is 104
-New total cost is: 1337064.210463643, difference is 1866.8801235295832, The number connected is 106
-New total cost is: 1335201.7127676613, difference is 1862.4976959817577, The number connected is 108
-New total cost is: 1333339.6299971398, difference is 1862.0827705215197, The number connected is 110
-New total cost is: 1331479.183079297, difference is 1860.4469178428408, The number connected is 112
-New total cost is: 1329618.73918111, difference is 1860.443898187019, The number connected is 114
-New total cost is: 1327760.7206152147, difference is 1858.0185658952687, The number connected is 116
-New total cost is: 1325902.7747302183, difference is 1857.9458849963266, The number connected is 118
-New total cost is: 1324131.9491496428, difference is 1770.8255805755034, The number connected is 119
-New total cost is: 1322179.2869874295, difference is 1952.6621622133534, The number connected is 121
-New total cost is: 1320321.90789119, difference is 1857.3790962395724, The number connected is 123
-New total cost is: 1318466.7295402302, difference is 1855.1783509596717, The number connected is 125
-New total cost is: 1316611.5531235402, difference is 1855.1764166899957, The number connected is 127
-New total cost is: 1314756.4748641537, difference is 1855.078259386588, The number connected is 129
-New total cost is: 1312901.4026413898, difference is 1855.0722227639053, The number connected is 131
-New total cost is: 1311048.7806676647, difference is 1852.6219737250358, The number connected is 133
-New total cost is: 1309196.9291712, difference is 1851.8514964648057, The number connected is 135
-New total cost is: 1307345.4596322922, difference is 1851.4695389077533, The number connected is 137
-New total cost is: 1305465.487397192, difference is 1879.972235100111, The number connected is 138
-New total cost is: 1303615.5149327007, difference is 1849.9724644913804, The number connected is 140
-New total cost is: 1301766.7103222804, difference is 1848.8046104202513, The number connected is 142
-New total cost is: 1300041.283040998, difference is 1725.4272812823765, The number connected is 143
-New total cost is: 1298030.6477212126, difference is 2010.6353197854478, The number connected is 144
-New total cost is: 1296184.8672453049, difference is 1845.7804759077262, The number connected is 146
 Second Stage starts with MST
 centers 70
+NumConnectedStructures:146
+
+LVPerCustomer:65.48262506481855
+
+MVPerCustomer:115.94139753291608
+
+Customers Per Tx:8.588235294117647
+
+GridCostPerCustomer:3786.2379012998545
+
+Total demand:7390
+
+Revenue per year:4434.0
+
