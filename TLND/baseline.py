@@ -964,7 +964,7 @@ def main(cur_file):
     TCost = 2000  # Transformer Cost
     distFromT = 500  # Dmax, direct distance from transformers
     searchRadius = 10000  # Reducing the distance to search locally   
-    searchRadius_LV = earchRadius
+    searchRadius_LV = searchRadius
     maxLVLenghtInCluster = 500  # Lmax
     # read shape file
     outputDir = cur_file[:-4]
