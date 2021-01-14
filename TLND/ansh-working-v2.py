@@ -982,7 +982,7 @@ def main(cur_file):
         #                                                             LVCostDict, searchRadius, MV, LV, TCost,
         #                                                             distFromT,
         #                                                             maxLVLenghtInCluster, outputDir, logfilename,connected)
-        import ipdb; ipdb.set_trace()
+        #import ipdb; ipdb.set_trace()
         totalCost, tree, centers, nodesByClusterID, LVCostSum = run(centers, nodesByClusterID, clusterByNode,
                                                                     LVCostDict, searchRadius, searchRadius_LV, MV, LV, TCost,
                                                                     distFromT, investment, cost_per_kwh, roi_years,
