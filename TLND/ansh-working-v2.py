@@ -425,7 +425,7 @@ def generateWeightedSegmentsLV_if(centers, searchRadius_LV,roi_years, cost_per_k
 
 def generateWeightedSegmentsLV_else(centers,searchRadius_LV,  all_ready_checked, roi_years, cost_per_kwh, LV, demand_weight= 0, LVCostDict = None):
     # this function determines the easiest to connect segments based on a ranking mechanism
-    import ipdb; ipdb.set_trace()  
+    #import ipdb; ipdb.set_trace()  
     segments = []
     nodeCopy = centers.copy()
     segID = 0
