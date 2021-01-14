@@ -643,8 +643,6 @@ def run(centers, nodesByClusterID, clusterByNode, LVCostDict, sr, searchRadius_L
             break           
 
 
-
-
     outFile.close()
     print("Second Stage starts with MST")
     if len(trueMinCenters) == len(centers) or len(trueMinCenters) == 1:
@@ -984,6 +982,7 @@ def main(cur_file):
         #                                                             LVCostDict, searchRadius, MV, LV, TCost,
         #                                                             distFromT,
         #                                                             maxLVLenghtInCluster, outputDir, logfilename,connected)
+        import ipdb; ipdb.set_trace()
         totalCost, tree, centers, nodesByClusterID, LVCostSum = run(centers, nodesByClusterID, clusterByNode,
                                                                     LVCostDict, searchRadius, searchRadius_LV, MV, LV, TCost,
                                                                     distFromT, investment, cost_per_kwh, roi_years,
