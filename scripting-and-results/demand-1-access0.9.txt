@@ -1,0 +1,21 @@
+HERE
+../shape-files/SoyNorth/subgrid_2
+Generating Dictionaries
+Run function starts...
+First Stage starts without MST
+Second Stage starts with MST
+centers 185
+NumConnectedStructures:649
+
+LVPerCustomer:81.63823349449969
+
+MVPerCustomer:35.78464220669121
+
+Customers Per Tx:14.422222222222222
+
+GridCostPerCustomer:1849.673274549873
+
+Total demand:33820
+
+Revenue per year:20292.0
+
