@@ -423,8 +423,9 @@ def generateWeightedSegmentsLV_if(centers, searchRadius_LV,roi_years, cost_per_k
     return segments_by_rank
 
 
-def generateWeightedSegmentsLV_else(centers, sr, searchRadius_LV,  all_ready_checked, roi_years, cost_per_kwh, LV, demand_weight= 0, LVCostDict = None):
+def generateWeightedSegmentsLV_else(centers,searchRadius_LV,  all_ready_checked, roi_years, cost_per_kwh, LV, demand_weight= 0, LVCostDict = None):
     # this function determines the easiest to connect segments based on a ranking mechanism
+    import ipdb; ipdb.set_trace()  
     segments = []
     nodeCopy = centers.copy()
     segID = 0
@@ -535,7 +536,8 @@ def run(centers, nodesByClusterID, clusterByNode, LVCostDict, sr, searchRadius_L
  
 
     #while (connected <= max_connection):
-    while (maxDist <= distFromT) & (connected <= max_connection):    
+    while (maxDist <= distFromT) & (connected <= max_connection):  
+
         i -= 1
         cur_token = 'stage1 ' + str(i)
         loggers(logfilename, initial, cur_token)
@@ -562,6 +564,8 @@ def run(centers, nodesByClusterID, clusterByNode, LVCostDict, sr, searchRadius_L
         for node in nodesByClusterID[baseClusterID]:
             clusterByNode[node] = baseClusterID
 
+        all_ready_checked.append([baseClusterID, mergingClusterID])           
+
         # segments = generateSegments(centers, sr)
 
         # Deleting the checked Segments:
@@ -586,7 +590,7 @@ def run(centers, nodesByClusterID, clusterByNode, LVCostDict, sr, searchRadius_L
 
         outFile.write("%i %f\n" % (i, sumLVCostAtEachStep[len(centers)]))
 
-        all_ready_checked.append([baseClusterID, mergingClusterID])
+        
 
         if (newTotalCost <= minTotalCost):
             minNodesByClusterID = copy.deepcopy(nodesByClusterID)
