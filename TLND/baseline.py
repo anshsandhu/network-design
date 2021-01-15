@@ -498,7 +498,7 @@ def generateWeightedSegmentsLV_else(centers,searchRadius_LV,  all_ready_checked,
 def run(centers, nodesByClusterID, clusterByNode, LVCostDict, sr, searchRadius_LV, MV, LV, TCost, distFromT, investment,
             cost_per_kwh,roi_years, maxLVLenghtInCluster,outputDir, logfilename,max_connection,demand_weight, access_rate):
     
-    import ipdb; ipdb.set_trace()
+
     print("First Stage starts without MST")
     
     sumLVCostAtEachStep = {}
