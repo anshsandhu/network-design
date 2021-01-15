@@ -1,0 +1,58 @@
+HERE
+../shape-files/SoyNorth/subgrid_2
+Generating Dictionaries
+Run function starts...
+First Stage starts without MST
+New total cost is: 1438040.3146874579, difference is -1438040.3146874579, The number connected is 2
+New total cost is: 1436085.7964987867, difference is 1954.518188671209, The number connected is 4
+New total cost is: 1434133.46294253, difference is 1952.3335562567227, The number connected is 6
+New total cost is: 1432183.7002020895, difference is 1949.7627404404338, The number connected is 8
+New total cost is: 1430236.3362095293, difference is 1947.3639925601892, The number connected is 10
+New total cost is: 1428289.099994734, difference is 1947.2362147953827, The number connected is 12
+New total cost is: 1426345.2177821163, difference is 1943.8822126176674, The number connected is 14
+New total cost is: 1424408.6017036245, difference is 1936.6160784917884, The number connected is 16
+New total cost is: 1422473.1427195785, difference is 1935.4589840460103, The number connected is 18
+New total cost is: 1420538.2748450332, difference is 1934.867874545278, The number connected is 20
+New total cost is: 1418608.5235023773, difference is 1929.751342655858, The number connected is 22
+New total cost is: 1416679.5248465475, difference is 1928.9986558298115, The number connected is 24
+New total cost is: 1414754.9090373856, difference is 1924.6158091619145, The number connected is 26
+New total cost is: 1412831.1766785725, difference is 1923.732358813053, The number connected is 28
+New total cost is: 1410911.3570522275, difference is 1919.8196263450664, The number connected is 30
+New total cost is: 1408993.1056670607, difference is 1918.2513851667754, The number connected is 32
+New total cost is: 1407075.6051303642, difference is 1917.5005366965197, The number connected is 34
+New total cost is: 1405161.6047466132, difference is 1914.0003837510012, The number connected is 36
+New total cost is: 1403248.9657953703, difference is 1912.6389512429014, The number connected is 38
+New total cost is: 1401336.9851201444, difference is 1911.9806752258446, The number connected is 40
+New total cost is: 1399460.714088284, difference is 1876.271031860495, The number connected is 41
+New total cost is: 1397505.558506537, difference is 1955.1555817469489, The number connected is 43
+New total cost is: 1395600.2226535536, difference is 1905.3358529834077, The number connected is 45
+New total cost is: 1393695.3122150276, difference is 1904.9104385259561, The number connected is 47
+New total cost is: 1391790.6962308842, difference is 1904.6159841434564, The number connected is 49
+New total cost is: 1389888.022772302, difference is 1902.673458582256, The number connected is 51
+New total cost is: 1387987.9581250057, difference is 1900.0646472962108, The number connected is 53
+New total cost is: 1386088.1053575254, difference is 1899.8527674803045, The number connected is 55
+New total cost is: 1384189.8545297785, difference is 1898.2508277469315, The number connected is 57
+New total cost is: 1382292.0847936433, difference is 1897.7697361351456, The number connected is 59
+New total cost is: 1380394.3152643298, difference is 1897.7695293135475, The number connected is 61
+New total cost is: 1378496.9851008295, difference is 1897.3301635002717, The number connected is 63
+New total cost is: 1376599.8458009902, difference is 1897.1392998392694, The number connected is 65
+New total cost is: 1374703.841351299, difference is 1896.0044496911578, The number connected is 67
+New total cost is: 1372808.177150591, difference is 1895.6642007080372, The number connected is 69
+New total cost is: 1370912.9601338534, difference is 1895.2170167376753, The number connected is 71
+New total cost is: 1369022.731762613, difference is 1890.2283712404314, The number connected is 73
+Second Stage starts with MST
+centers 36
+NumConnectedStructures:73
+
+LVPerCustomer:83.22918695717136
+
+MVPerCustomer:203.70237930421936
+
+Customers Per Tx:5.615384615384615
+
+GridCostPerCustomer:6281.0157357388425
+
+Total demand:3450
+
+Revenue per year:2070.0
+

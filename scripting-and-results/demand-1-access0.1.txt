@@ -1,0 +1,59 @@
+HERE
+../shape-files/SoyNorth/subgrid_2
+Generating Dictionaries
+Run function starts...
+First Stage starts without MST
+New total cost is: 1438111.236755833, difference is -1438111.236755833, The number connected is 2
+New total cost is: 1436253.6641550935, difference is 1857.5726007395424, The number connected is 4
+New total cost is: 1434398.4877384037, difference is 1855.1764166897628, The number connected is 6
+New total cost is: 1432543.4155156396, difference is 1855.0722227641381, The number connected is 8
+New total cost is: 1430691.9459767316, difference is 1851.4695389079861, The number connected is 10
+New total cost is: 1428966.5186954492, difference is 1725.4272812823765, The number connected is 11
+New total cost is: 1426999.1438854735, difference is 1967.3748099757358, The number connected is 13
+New total cost is: 1425174.721337683, difference is 1824.4225477904547, The number connected is 15
+New total cost is: 1423354.9320239124, difference is 1819.7893137705978, The number connected is 17
+New total cost is: 1421547.7271641213, difference is 1807.2048597910907, The number connected is 19
+New total cost is: 1419745.226754627, difference is 1802.500409494387, The number connected is 21
+New total cost is: 1417948.9165449704, difference is 1796.3102096566, The number connected is 23
+New total cost is: 1416166.1589012248, difference is 1782.7576437455136, The number connected is 25
+New total cost is: 1414383.4788773758, difference is 1782.6800238490105, The number connected is 27
+New total cost is: 1412603.6137028807, difference is 1779.8651744951494, The number connected is 29
+New total cost is: 1410828.0155267727, difference is 1775.5981761079747, The number connected is 31
+New total cost is: 1409057.7614104922, difference is 1770.25411628047, The number connected is 33
+New total cost is: 1407291.9817410293, difference is 1765.779669462936, The number connected is 35
+New total cost is: 1405534.3382525735, difference is 1757.6434884557966, The number connected is 37
+New total cost is: 1403546.83046488, difference is 1987.5077876935247, The number connected is 38
+New total cost is: 1401587.1451523378, difference is 1959.685312542133, The number connected is 40
+New total cost is: 1399770.556838746, difference is 1816.5883135918994, The number connected is 41
+New total cost is: 1397640.583412076, difference is 2129.973426669836, The number connected is 43
+New total cost is: 1395901.250062917, difference is 1739.3333491592202, The number connected is 45
+New total cost is: 1393954.0138481215, difference is 1947.2362147953827, The number connected is 47
+New total cost is: 1392010.1316355038, difference is 1943.8822126176674, The number connected is 49
+New total cost is: 1390074.672651458, difference is 1935.4589840457775, The number connected is 51
+New total cost is: 1388360.672265371, difference is 1714.000386086991, The number connected is 53
+New total cost is: 1386440.852639026, difference is 1919.8196263450664, The number connected is 55
+New total cost is: 1384523.3521023293, difference is 1917.5005366967525, The number connected is 57
+New total cost is: 1382609.3517185783, difference is 1914.0003837510012, The number connected is 59
+New total cost is: 1380696.7127673354, difference is 1912.6389512429014, The number connected is 61
+New total cost is: 1379002.4659403444, difference is 1694.2468269909732, The number connected is 63
+New total cost is: 1377309.1524228319, difference is 1693.3135175125208, The number connected is 65
+New total cost is: 1375410.9015950852, difference is 1898.2508277466986, The number connected is 67
+New total cost is: 1373513.1318589498, difference is 1897.7697361353785, The number connected is 69
+New total cost is: 1371623.1002067793, difference is 1890.0316521704663, The number connected is 71
+New total cost is: 1369735.3034796189, difference is 1887.7967271604575, The number connected is 73
+Second Stage starts with MST
+centers 35
+NumConnectedStructures:73
+
+LVPerCustomer:76.77685227445905
+
+MVPerCustomer:214.5588972417905
+
+Customers Per Tx:5.214285714285714
+
+GridCostPerCustomer:6515.302597624969
+
+Total demand:6250
+
+Revenue per year:3750.0
+
