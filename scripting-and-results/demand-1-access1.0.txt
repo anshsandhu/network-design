@@ -1,8 +1,0 @@
-HERE
-../shape-files/SoyNorth/subgrid_2
-Generating Dictionaries
-Run function starts...
-First Stage starts without MST
-Second Stage starts with MST
-centers 88
-Error with file: 99

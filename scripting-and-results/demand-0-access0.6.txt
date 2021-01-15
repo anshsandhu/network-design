@@ -4,18 +4,18 @@ Generating Dictionaries
 Run function starts...
 First Stage starts without MST
 Second Stage starts with MST
-centers 159
-NumConnectedStructures:434
+centers 162
+NumConnectedStructures:451
 
-LVPerCustomer:54.14380927036855
+LVPerCustomer:53.27234448011272
 
-MVPerCustomer:48.7111865510201
+MVPerCustomer:46.62536539940951
 
-Customers Per Tx:17.36
+Customers Per Tx:17.346153846153847
 
-GridCostPerCustomer:1874.4251297510773
+GridCostPerCustomer:1813.656914597895
 
-Total demand:22470
+Total demand:23540
 
-Revenue per year:13482.0
+Revenue per year:14124.0
 

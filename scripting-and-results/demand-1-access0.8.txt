@@ -7,13 +7,13 @@ Second Stage starts with MST
 centers 194
 NumConnectedStructures:577
 
-LVPerCustomer:79.65615705109967
+LVPerCustomer:81.21322046952614
 
-MVPerCustomer:40.09679266664313
+MVPerCustomer:40.2800124193735
 
-Customers Per Tx:13.418604651162791
+Customers Per Tx:13.113636363636363
 
-GridCostPerCustomer:1948.0281809379067
+GridCostPerCustomer:1971.6455134464964
 
 Total demand:30400
 

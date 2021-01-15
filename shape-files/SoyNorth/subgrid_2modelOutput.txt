@@ -1,7 +1,7 @@
-NumConnectedStructures:710
-LVPerCustomer:66.83319724446761
-MVPerCustomer:31.622616393754004
-Customers Per Tx:21.515151515151516
-GridCostPerCustomer:1551.8551287673995
-Total demand:36210
-Revenue per year:21726.0
+NumConnectedStructures:713
+LVPerCustomer:145.5069078119558
+MVPerCustomer:37.08107028701836
+Customers Per Tx:8.488095238095237
+GridCostPerCustomer:2617.719958717177
+Total demand:36300
+Revenue per year:21780.0
