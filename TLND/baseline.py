@@ -497,8 +497,10 @@ def generateWeightedSegmentsLV_else(centers,searchRadius_LV,  all_ready_checked,
 #         outputDir, logfilename,max_connection):
 def run(centers, nodesByClusterID, clusterByNode, LVCostDict, sr, searchRadius_LV, MV, LV, TCost, distFromT, investment,
             cost_per_kwh,roi_years, maxLVLenghtInCluster,outputDir, logfilename,max_connection,demand_weight, access_rate):
+    
+    import ipdb; ipdb.set_trace()
     print("First Stage starts without MST")
-    #import ipdb; ipdb.set_trace()
+    
     sumLVCostAtEachStep = {}
     minCenters = copy.deepcopy(centers)
     all_ready_checked = []   
@@ -537,10 +539,6 @@ def run(centers, nodesByClusterID, clusterByNode, LVCostDict, sr, searchRadius_L
     connected = 0
     
     newTotalCost = 0
-
-    SegmentsToCheckID = []
-    for seg in segments:
-        SegmentsToCheckID.append(seg.getID())
 
  
 
@@ -601,6 +599,7 @@ def run(centers, nodesByClusterID, clusterByNode, LVCostDict, sr, searchRadius_L
 
         
 
+
         if (newTotalCost <= minTotalCost):
             minNodesByClusterID = copy.deepcopy(nodesByClusterID)
             # minTree=copy.deepcopy(newTree)
@@ -608,6 +607,7 @@ def run(centers, nodesByClusterID, clusterByNode, LVCostDict, sr, searchRadius_L
             minLVCostDict = LVCostDict.copy()
             minTotalCost = newTotalCost
             minClusterByNode = copy.deepcopy(clusterByNode)
+            #import ipdb; ipdb.set_trace()
             connected, trueNodesByClusterID, trueMinCenters = check_number_connected([minNodesByClusterID,minCenters], access_rate)
 
             # Adding this inside the statement:
@@ -617,8 +617,8 @@ def run(centers, nodesByClusterID, clusterByNode, LVCostDict, sr, searchRadius_L
             # Moved this from the chunk
             segments = generateWeightedSegmentsLV_if(minCenters, searchRadius_LV, roi_years, cost_per_kwh, LV, demand_weight,LVCostDict)
             
-            #print("New total cost is: {}, difference is {}, The number connected is {}".format(newTotalCost, - newTotalCost + oldcost,
-            #            connected))
+            print("New total cost is: {}, difference is {}, The number connected is {}".format(newTotalCost, - newTotalCost + oldcost,
+                        connected))
 
             #if connected >= 284:
             #    import ipdb; ipdb.set_trace()
@@ -964,8 +964,9 @@ def main(cur_file):
     TCost = 2000  # Transformer Cost
     distFromT = 500  # Dmax, direct distance from transformers
     searchRadius = 10000  # Reducing the distance to search locally   
-    searchRadius_LV = searchRadius
+    searchRadius_LV = 500
     maxLVLenghtInCluster = 500  # Lmax
+    #import ipdb; ipdb.set_trace()
     # read shape file
     outputDir = cur_file[:-4]
     access_rate = float(sys.argv[1])  # penetration rate
@@ -998,9 +999,6 @@ def main(cur_file):
                                                                     maxLVLenghtInCluster, outputDir, logfilename,connected,demand_weight, access_rate)
 
 
-        #import ipdb; ipdb.set_trace()
-
-        # import ipdb;ipdb.set_trace()
         fileRW.genShapefile(tree, outputDir + ".prj", outputDir + os.sep + "MV.shp")
 
         statsFile1 = outputDir + os.sep + "LVCostDict.txt"

@@ -409,7 +409,7 @@ def generateWeightedSegments(centers, searchRadius, roi_years, cost_per_kwh, LV,
 def run(centers, nodesByClusterID, clusterByNode, LVCostDict, sr, MV, LV, TCost, distFromT, investment,
             cost_per_kwh,roi_years, maxLVLenghtInCluster,outputDir, logfilename,max_connection,demand_weight):
     print("First Stage starts without MST")
-    import ipdb; ipdb.set_trace()
+    #import ipdb; ipdb.set_trace()
     sumLVCostAtEachStep = {}
     minCenters = copy.deepcopy(centers)
     # segments = generateSegments(minCenters, sr)
@@ -828,7 +828,7 @@ def main(cur_file):
     investment = 600000
     roi_years = 5
     cost_per_kwh = 0.05
-    demand_weight = 1
+    demand_weight = 0
 
     if os.path.isdir(outputDir):
         shutil.rmtree(outputDir)

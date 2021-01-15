@@ -1,7 +1,15 @@
-NumConnectedStructures:504
-LVPerCustomer:54.00212563148839
-MVPerCustomer:41.32324677335821
-Customers Per Tx:19.384615384615383
-GridCostPerCustomer:1676.2770288234424
-Total demand:26460
-Revenue per year:15876.0
+NumStructures:720
+NumConnectedStructures:73
+LVLength:6075.73064787351
+LVPerCustomer:83.22918695717136
+MVLength:14870.273689208014
+MVPerCustomer:203.70237930421936
+Num Transformers:13
+Customers Per Tx:5.615384615384615
+Total LV Cost:60757.3064787351
+Total MV Cost:371756.84223020036
+Transformer Cost:26000
+Total Grid Cost:458514.1487089355
+GridCostPerCustomer:6281.0157357388425
+Total Running Time:61.14594507217407
+Final Running Time:61.145946741104126
