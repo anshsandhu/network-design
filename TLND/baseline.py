@@ -510,8 +510,8 @@ def run(centers, nodesByClusterID, clusterByNode, LVCostDict, sr, searchRadius_L
     statFile = outputDir + os.sep + "TotalCost_FirstStage.txt"
     outFile = open(statFile, "w")
 
-    #minTotalCost = len(centers) * TCost
-    minTotalCost = max_connection* TCost
+    minTotalCost = len(centers) * TCost
+    #minTotalCost = max_connection* TCost
     outFile.write("%(minTotalCost)f\n" % vars())
     minLVCostDict = copy.deepcopy(LVCostDict)
 
