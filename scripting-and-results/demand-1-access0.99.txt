@@ -415,3 +415,109 @@ New total cost is: 768939.6412419382, difference is 1603.3553785611875, The numb
 New total cost is: 767574.2362093255, difference is 1365.4050326127326, The number connected is 614
 New total cost is: 766610.3009764844, difference is 963.9352328410605, The number connected is 616
 New total cost is: 765545.1602694736, difference is 1065.140707010869, The number connected is 616
+New total cost is: 764155.4511164606, difference is 1389.7091530129546, The number connected is 616
+New total cost is: 762988.5558323215, difference is 1166.8952841390856, The number connected is 616
+New total cost is: 761453.5269149214, difference is 1535.0289174001664, The number connected is 616
+New total cost is: 760393.6547875648, difference is 1059.8721273565898, The number connected is 617
+New total cost is: 758779.6149994582, difference is 1614.0397881065728, The number connected is 618
+New total cost is: 757396.7443002932, difference is 1382.8706991650397, The number connected is 618
+New total cost is: 756546.2554459407, difference is 850.4888543525012, The number connected is 619
+New total cost is: 754928.2404280324, difference is 1618.0150179082993, The number connected is 620
+New total cost is: 753863.6274671748, difference is 1064.612960857572, The number connected is 621
+New total cost is: 752743.6310755565, difference is 1119.996391618275, The number connected is 623
+New total cost is: 752173.6438875546, difference is 569.9871880018618, The number connected is 623
+New total cost is: 751935.5965170481, difference is 238.04737050656695, The number connected is 623
+New total cost is: 749473.895564694, difference is 2461.70095235412, The number connected is 624
+New total cost is: 747549.5317478217, difference is 1924.363816872239, The number connected is 624
+New total cost is: 747214.7988610361, difference is 334.7328867856413, The number connected is 624
+New total cost is: 745347.8431720332, difference is 1866.9556890028762, The number connected is 625
+New total cost is: 744538.1616614519, difference is 809.6815105812857, The number connected is 625
+New total cost is: 742881.3768921, difference is 1656.7847693519434, The number connected is 626
+New total cost is: 742014.0260301145, difference is 867.3508619854692, The number connected is 628
+New total cost is: 741148.2797590739, difference is 865.7462710406398, The number connected is 630
+New total cost is: 740498.7572088477, difference is 649.5225502261892, The number connected is 632
+New total cost is: 739961.5683557279, difference is 537.1888531197328, The number connected is 632
+New total cost is: 738334.4386759754, difference is 1627.1296797525138, The number connected is 633
+New total cost is: 737304.5213983397, difference is 1029.9172776357736, The number connected is 634
+New total cost is: 737208.4895275829, difference is 96.03187075676396, The number connected is 634
+New total cost is: 734970.2837788374, difference is 2238.205748745473, The number connected is 636
+New total cost is: 733809.0302724219, difference is 1161.2535064155236, The number connected is 637
+New total cost is: 732603.7213088647, difference is 1205.3089635572396, The number connected is 638
+New total cost is: 731696.9774737062, difference is 906.7438351584133, The number connected is 639
+New total cost is: 730823.3505520553, difference is 873.6269216509536, The number connected is 640
+New total cost is: 729504.6736930724, difference is 1318.6768589828862, The number connected is 641
+New total cost is: 728180.2361583314, difference is 1324.4375347410096, The number connected is 641
+New total cost is: 726360.235369513, difference is 1820.0007888183463, The number connected is 643
+New total cost is: 725226.6248917015, difference is 1133.6104778115405, The number connected is 644
+New total cost is: 724677.3913267878, difference is 549.2335649137385, The number connected is 645
+New total cost is: 723431.188182876, difference is 1246.2031439117854, The number connected is 647
+New total cost is: 723004.2241164425, difference is 426.96406643348746, The number connected is 647
+New total cost is: 720944.2254204869, difference is 2059.9986959556118, The number connected is 649
+New total cost is: 720360.6618287342, difference is 583.563591752667, The number connected is 649
+New total cost is: 717944.6055436955, difference is 2416.056285038707, The number connected is 650
+New total cost is: 717038.6179277994, difference is 905.9876158961561, The number connected is 650
+New total cost is: 715961.1314967426, difference is 1077.48643105675, The number connected is 651
+New total cost is: 715793.295955105, difference is 167.83554163761437, The number connected is 652
+New total cost is: 714485.6810055523, difference is 1307.6149495526915, The number connected is 652
+New total cost is: 713140.8051240299, difference is 1344.8758815224282, The number connected is 654
+New total cost is: 712194.5594262074, difference is 946.2456978224218, The number connected is 656
+New total cost is: 710991.6566748342, difference is 1202.9027513732435, The number connected is 657
+New total cost is: 709868.5165174501, difference is 1123.1401573840994, The number connected is 657
+New total cost is: 708427.7072736659, difference is 1440.8092437841697, The number connected is 657
+New total cost is: 707048.5547729459, difference is 1379.1525007199962, The number connected is 657
+New total cost is: 704115.5830687913, difference is 3597.37879861705, The number connected is 658
+New total cost is: 702546.8182571605, difference is 1568.7648116308264, The number connected is 659
+New total cost is: 702033.747016124, difference is 513.0712410365231, The number connected is 659
+New total cost is: 700963.5448772458, difference is 1070.2021388781723, The number connected is 660
+New total cost is: 700391.233696694, difference is 572.3111805517692, The number connected is 661
+New total cost is: 698928.7854011676, difference is 1462.4482955264393, The number connected is 662
+New total cost is: 697311.9032017011, difference is 1616.8821994664613, The number connected is 663
+New total cost is: 697024.2156990699, difference is 287.6875026312191, The number connected is 663
+New total cost is: 695141.5562380496, difference is 1882.6594610202592, The number connected is 663
+New total cost is: 694891.63229023, difference is 249.92394781962503, The number connected is 663
+New total cost is: 692254.1704710155, difference is 2637.4618192145135, The number connected is 664
+New total cost is: 690860.3084718583, difference is 1393.861999157234, The number connected is 664
+New total cost is: 689313.1639259678, difference is 1547.1445458905073, The number connected is 666
+New total cost is: 688536.4805206216, difference is 776.6834053461207, The number connected is 667
+New total cost is: 688344.5995548026, difference is 191.88096581900027, The number connected is 667
+New total cost is: 686245.8075776607, difference is 2098.791977141984, The number connected is 668
+New total cost is: 685638.9916511119, difference is 606.815926548792, The number connected is 668
+New total cost is: 684294.4674819593, difference is 1344.5241691526026, The number connected is 670
+New total cost is: 683703.6549143449, difference is 590.8125676143682, The number connected is 670
+New total cost is: 682955.964404929, difference is 747.6905094159301, The number connected is 670
+New total cost is: 680706.5645783823, difference is 2249.3998265466653, The number connected is 671
+New total cost is: 678309.7020740232, difference is 10977.381377674406, The number connected is 679
+New total cost is: 677675.641878963, difference is 2047.2679124147398, The number connected is 685
+New total cost is: 677265.2657769716, difference is 6189.356026701396, The number connected is 685
+New total cost is: 676259.6020043414, difference is 1808.4444827201078, The number connected is 687
+New total cost is: 674886.0316498196, difference is 4674.074443851598, The number connected is 687
+New total cost is: 673802.2871588843, difference is 6053.300030646846, The number connected is 689
+New total cost is: 673744.6115954478, difference is 1851.253185770358, The number connected is 693
+New total cost is: 672875.2812180936, difference is 2711.2569982795976, The number connected is 693
+New total cost is: 672425.0738471416, difference is 11308.637863791431, The number connected is 693
+New total cost is: 671357.9261403717, difference is 2059.8716222554212, The number connected is 695
+New total cost is: 669904.8770752747, difference is 2332.365642895107, The number connected is 697
+New total cost is: 666661.1792435981, difference is 5700.007207778166, The number connected is 697
+New total cost is: 662836.8362396488, difference is 8128.05865585932, The number connected is 700
+New total cost is: 661553.1006805163, difference is 2149.6310789319687, The number connected is 704
+New total cost is: 657501.6716261486, difference is 15963.934167627362, The number connected is 704
+New total cost is: 656716.775323773, difference is 1415.4107043361291, The number connected is 707
+New total cost is: 653152.024095845, difference is 8847.249881638447, The number connected is 709
+New total cost is: 651069.3570172135, difference is 10022.581266707042, The number connected is 711
+New total cost is: 650938.0639973116, difference is 7061.010146142333, The number connected is 713
+Second Stage starts with MST
+centers 133
+NumConnectedStructures:713
+
+LVPerCustomer:145.5069078119558
+
+MVPerCustomer:37.08107028701836
+
+Customers Per Tx:8.488095238095237
+
+GridCostPerCustomer:2617.719958717177
+
+Total demand:36300
+
+Revenue per year:21780.0
+
