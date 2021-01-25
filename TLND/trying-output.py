@@ -964,12 +964,11 @@ def main(cur_file):
     TCost = 2000  # Transformer Cost
     distFromT = 500  # Dmax, direct distance from transformers
     searchRadius = 10000  # Reducing the distance to search locally   
-    searchRadius_LV = 10000
+    searchRadius_LV = 500
     maxLVLenghtInCluster = 500  # Lmax
     #import ipdb; ipdb.set_trace()
     # read shape file
-    import ipdb; ipdb.set_trace()
-    outputDir = cur_file[:-4]
+    outputDir = "../scripting-and-results/res"
     access_rate = float(sys.argv[1])  # penetration rate
     investment = 600000
     roi_years = 5
