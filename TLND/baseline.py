@@ -617,8 +617,8 @@ def run(centers, nodesByClusterID, clusterByNode, LVCostDict, sr, searchRadius_L
             # Moved this from the chunk
             segments = generateWeightedSegmentsLV_if(minCenters, searchRadius_LV, roi_years, cost_per_kwh, LV, demand_weight,LVCostDict)
             
-            print("New total cost is: {}, difference is {}, The number connected is {}".format(newTotalCost, - newTotalCost + oldcost,
-                        connected))
+            #print("New total cost is: {}, difference is {}, The number connected is {}".format(newTotalCost, - newTotalCost + oldcost,
+                        #connected))
 
             #if connected >= 284:
             #    import ipdb; ipdb.set_trace()
@@ -967,8 +967,7 @@ def main(cur_file):
     searchRadius_LV = 10000
     maxLVLenghtInCluster = 500  # Lmax
     #import ipdb; ipdb.set_trace()
-    # read shape file
-    import ipdb; ipdb.set_trace()
+
     outputDir = cur_file[:-4]
     access_rate = float(sys.argv[1])  # penetration rate
     investment = 600000
